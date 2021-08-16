@@ -14,8 +14,11 @@ class DiceSets {
         const diceSetName = document.createElement('h1');
         diceSetName.innerText = this.name;
 
+        diceSetCard.appendChild(diceSetName)
+        diceSetList.appendChild(diceSetCard)
 
-        
+
+
         };
 
 };
