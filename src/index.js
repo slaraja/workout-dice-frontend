@@ -4,14 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(endPoint)
     .then(resp => resp.json())
     .then(json => console.log(json));
-};
+});
 
-renderDiceSet() {
-const diceSetList = document.getElementById('xxxx')
 
-}
-
-);
 
 
 // document.addEventListener('DOMContentLoaded', () => {
