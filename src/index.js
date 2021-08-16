@@ -4,7 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(endPoint)
     .then(resp => resp.json())
     .then(json => console.log(json));
-});
+
+    diceSets.forEach[dice => {
+    const newDice = new DiceSet(dice)
+    newDice.renderDiceSet()
+    }
+    
+
 
 
 
