@@ -6,19 +6,24 @@ class DiceSets {
         this.workouts = workouts;
     };
 
-    renderDiceSet() {
-        const diceSetList = document.getElementById('dice-list')
-        const diceSetDiv = document.createElement('div')
-        diceSetList.classList.add('dice-card')
+    function renderDiceSets(arg){
+        const diceSet = arg["dice"]
+        diceSets.forEach(dice => {
+        renderDiceSet(dice)
+        })
+    }
+
+    // renderDiceSet() {
+    //     const diceSetList = document.getElementById('dice-list')
+    //     const diceSetDiv = document.createElement('div')
+    //     diceSetList.classList.add('dice-card')
         
-        const diceSetName = document.createElement('h1');
-        diceSetName.innerText = this.name;
+    //     const diceSetName = document.createElement('h1');
+    //     diceSetName.innerText = this.name;
 
-        diceSetCard.appendChild(diceSetName)
-        diceSetList.appendChild(diceSetCard)
+    //     diceSetCard.appendChild(diceSetName)
+    //     diceSetList.appendChild(diceSetCard)
 
 
 
-        };
-
-};
+    //     };
