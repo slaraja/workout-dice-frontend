@@ -13,17 +13,14 @@ class DiceSets {
         })
     }
 
-
     renderDiceSet() {
         const diceSetList = document.getElementById('dice-list')
-        const diceSetDiv = document.createElement('div')
-        diceSetList.classList.add('dice-card')
+        diceSetList.classList.add('dice')
         
         const diceSetName = document.createElement('h1');
         diceSetName.innerText = this.name;
 
-        diceSetCard.appendChild(diceSetName)
-        diceSetList.appendChild(diceSetCard)
+        diceSetList.appendChild(diceSetName)
     };
-    };
+};
 
