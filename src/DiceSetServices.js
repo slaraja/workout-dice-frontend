@@ -9,6 +9,7 @@ class DiceSetServices {
             json.forEach(dice => {
              const diceSet = new DiceSets(dice);
               diceSet.renderDiceSet()
+              //calling function from diceset.js
             })
         })
         })

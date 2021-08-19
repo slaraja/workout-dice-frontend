@@ -24,3 +24,15 @@ class DiceSets {
     };
 };
 
+// renderWorkout() {
+//     const workoutList = document.getElementById('workout-list')
+//     diceSetList.classList.add('dice')
+    
+//     const diceSetName = document.createElement('h1');
+//     diceSetName.innerText = this.name;
+
+//     diceSetList.appendChild(diceSetName)
+// };
+// };
+
+
