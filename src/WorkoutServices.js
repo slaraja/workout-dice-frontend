@@ -7,9 +7,8 @@ class WorkoutServices {
             .then(resp => resp.json())
             .then(json => {
                 json.forEach(workout => {
-                 const workouts = new DiceSets(workout);
+                 const workouts = new Workout(workout);
                   workouts.renderWorkout()
-                  //calling function from diceset.js
                 })
             })
             })

@@ -3,7 +3,6 @@ class DiceSets {
         this.id = id;
         this.name = name;
         this.side = side;
-        this.workouts = workouts;
     }
 
     renderDiceSets(arg){
@@ -22,7 +21,6 @@ class DiceSets {
 
         diceSetList.appendChild(diceSetName)
     };
-
 
 };
 

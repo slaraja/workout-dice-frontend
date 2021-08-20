@@ -1,17 +1,10 @@
+//add dom content loaded here to run after other JS files get read
+//invoke dice set and workout
+
+const workoutEndPoint = new WorkoutServices('http://localhost:3000/workouts');
+const diceSetEndPoint = new DiceSetServices('http://localhost:3000/dicesets');
 
 document.addEventListener('DOMContentLoaded', () => {
-    const endPoint = 'http://localhost:3000/dice_sets';
-    fetch(endPoint)
-    .then(resp => resp.json())
-    .then(json => {
-        json.forEach(dice => {
-         const diceSet = new DiceSets(dice);
-          diceSet.renderDiceSet()
-        })
-      })
-    })
-
-    // diceSets.forEach[dice => {
-    // const newDice = new DiceSet(dice)
-    // newDice.renderDiceSet()
-    // };
+    workoutEndPoint.fetch
+    diceSetEndPoint.fetch
+}
