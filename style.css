@@ -1,3 +1,9 @@
+* {box-sizing: border-box}
 
+body{
+    font-family: optima;
+    background: rgb(129, 9, 93);
+    color: rgb(255, 255, 255)
+}
 
 /* reference: https://icodemag.com/3d-rolling-dice-css-javascript/ */
