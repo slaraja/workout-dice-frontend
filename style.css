@@ -6,4 +6,11 @@ body{
     color: rgb(255, 255, 255)
 }
 
+.scene{
+    width: 200px;    
+    height: 200px;
+    margin: 20px;
+    perspective: 600px;;
+}
+
 /* reference: https://icodemag.com/3d-rolling-dice-css-javascript/ */
