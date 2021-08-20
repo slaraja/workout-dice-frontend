@@ -1,14 +1,13 @@
 class Workout {
 
+    renderWorkout() {
+        const workoutList = document.getElementById('workout-list')
+        workoutList.classList.add('workout')
+        
+        const workoutName = document.createElement('h2');
+        workoutName.innerText = this.name;
+    
+        workoutList.appendChild(workoutName)
+    };
 
-
-//     renderWorkoutInfo(){
-//     const workoutData = document.createElement('div');
-//         workoutData.innerHTML =
-//         <h1>this.name</h1>
-
-// return workoutData: 
-// or append????
-
-//     }
 }
