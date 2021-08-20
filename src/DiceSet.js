@@ -22,17 +22,16 @@ class DiceSets {
 
         diceSetList.appendChild(diceSetName)
     };
-};
 
-// renderWorkout() {
-//     const workoutList = document.getElementById('workout-list')
-//     diceSetList.classList.add('dice')
+renderWorkout() {
+    const workoutList = document.getElementById('workout-list')
+    workoutList.classList.add('workout')
     
-//     const diceSetName = document.createElement('h1');
-//     diceSetName.innerText = this.name;
+    const workoutName = document.createElement('h2');
+    workoutName.innerText = this.name;
 
-//     diceSetList.appendChild(diceSetName)
-// };
-// };
+    workoutList.appendChild(workoutList)
+};
+};
 
 
