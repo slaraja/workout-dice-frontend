@@ -1,9 +1,15 @@
 class Workout {
 
-    constructor({id, dice_set, name}) {
+    static all = []
+
+    constructor({id, name, dice_set}) {
         this.id = id;
-        this.dice_set = dice_set;
         this.name = name; 
+        this.dice_set = dice_set;
+
+        //remembers all of the workouts
+        Workout.all.push(this)
+
     }
 
     renderWorkout() {

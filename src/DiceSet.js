@@ -1,4 +1,4 @@
-class DiceSets {
+class DiceSet {
     constructor({id, name, side, workouts}) {
         this.id = id;
         this.name = name;

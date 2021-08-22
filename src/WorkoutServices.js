@@ -1,16 +1,17 @@
 class WorkoutServices {
 
+   constructor(baseURL) {
+       this.baseURL = baseURL;
+   };
+
     getWorkouts(){
-        document.addEventListener('DOMContentLoaded', () => {
-            const endPoint = 'http://localhost:3000/workouts';
-            fetch(endPoint)
+            fetch(this.baseURL)
             .then(resp => resp.json())
             .then(json => {
                 json.forEach(workout => {
                  const workouts = new Workout(workout);
                   workouts.renderWorkout()
                 })
-            })
             })
         }
 
