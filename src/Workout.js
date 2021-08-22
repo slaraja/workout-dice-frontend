@@ -12,6 +12,14 @@ class Workout {
 
     }
 
+
+    renderWorkouts(arg){
+        const Workout = arg["data"]
+        Workouts.forEach(data => {
+        renderWorkout(data)
+        })
+    }
+
     renderWorkout() {
         const workoutList = document.getElementById('workout-list')
         workoutList.classList.add('workout')
@@ -23,3 +31,4 @@ class Workout {
     };
 
 }
+
