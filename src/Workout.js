@@ -12,7 +12,6 @@ class Workout {
 
     }
 
-
     renderWorkouts(arg){
         const Workout = arg["data"]
         Workouts.forEach(data => {
@@ -30,18 +29,6 @@ class Workout {
         workoutList.appendChild(workoutName)
     };
 
-    renderForm(){
-        const list = document.getElementById('form-list');
-        const form = document.getElementbyID('form');
-        const nameInput = document.getElementbyID('name-input');
-    };
-
-
-    addEventListener(event) {
-        form.addEventListener('submit', handleSubmit)
-        event.preventDefault //otherwise will send a post request
-        debugger
-    };
 
 
 }
