@@ -5,13 +5,13 @@ class DiceSet {
         this.side = side;
     }
 
-    renderDiceSets(arg){
-        const diceSet = arg["dice"]
-        debugger
-        diceSets.forEach(dice => {
-        renderDiceSet(dice)
-        })
-    }
+    // renderDiceSets(arg){
+    //     const diceSet = arg["dice"]
+    //     debugger
+    //     diceSets.forEach(dice => {
+    //     renderDiceSet(dice)
+    //     })
+    // }
 
     renderDiceSet() {
         const diceSetList = document.getElementById('dice-list')
