@@ -30,5 +30,11 @@ class Workout {
         workoutList.appendChild(workoutName)
     };
 
-}
 
+
+    renderForm(){
+        const list = document.getElementById('form-list');
+        const form = document.getElementbyID('form');
+        const nameInput = document.getElementbyID('name-input');
+    };
+}
