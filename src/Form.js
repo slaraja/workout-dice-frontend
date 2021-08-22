@@ -1,13 +1,13 @@
 class Form {
 
     renderForm(){
+        const form = document.getElementbyId('form');
         const list = document.getElementById('form-list');
-        const form = document.getElementbyID('form');
-        const nameInput = document.getElementbyID('name-input');
+        const nameInput = document.getElementbyId('name-input');
     };
 
     addEventListener(event) {
-        form.addEventListener('submit', handleSubmit)
+        form.addEventListener('submit', eventListener)
         event.preventDefault //otherwise will send a post request
         debugger
     };
