@@ -36,7 +36,12 @@ class Workout {
         const nameInput = document.getElementbyID('name-input');
     };
 
-    addEventListener() {
+
+    addEventListener(event) {
         form.addEventListener('submit', handleSubmit)
+        event.preventDefault //otherwise will send a post request
+        debugger
     };
+
+
 }
