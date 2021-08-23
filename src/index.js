@@ -8,3 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     diceEndPoint.getDiceSets();
     workEndPoint.getWorkouts();
 })
+
+form.addEventListener('submit', handleSubmit)
+
