@@ -15,7 +15,7 @@ function handleSubmit(event){
     
     //grab the value of what the user types into the field
     const nameInputString = nameInputField.value
-    
+
     //creates a p tag
     const exercisePTag = document.createElement('p')
 
@@ -25,6 +25,15 @@ function handleSubmit(event){
     //append p tag to the DOM
     form.appendChild(exercisePTag)
 
+    // function handleError {
+    //     const error = (error) => {
+    //     console.log(error)
+    //     }
+    //     }
+
 }
+
+
+
 
 
