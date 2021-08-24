@@ -11,13 +11,18 @@ form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event){
     event.preventDefault() //otherwise will send a post request
-    // console.log("clicked")
     const nameInputField = event.target.querySelector('#name-input')
+    
+    //grab the value of what the user types into the field
     const nameInputString = nameInputField.value
-
+    
+    //creates a p tag
     const exercisePTag = document.createElement('p')
+
+    //give the p tag text content as a string
     exercisePTag.textContent = nameInputString
 
+    //append p tag to the DOM
     form.appendChild(exercisePTag)
 
 }
