@@ -3,6 +3,7 @@ class DiceSet {
         this.id = id;
         this.name = name;
         this.side = side;
+        this.workouts = workouts;
     }
 
     // renderDiceSets(arg){
@@ -20,12 +21,11 @@ class DiceSet {
         const diceSetName = document.createElement('h1');
         diceSetName.innerText = this.name;
 
-        // const diceSetSide = document.createElement('h2');
-        // diceSetSide.innerText = this.side;
-     
+        const diceSetWorkouts = document.createElement('h2');
+        diceSetWorkouts.innerText = this.workouts;
 
         diceSetList.appendChild(diceSetName)
-        // diceSetList.appendChild(diceSetSide)
+        diceSetList.appendChild(diceSetWorkouts)
     };
 
 };

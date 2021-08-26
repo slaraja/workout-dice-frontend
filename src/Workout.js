@@ -25,10 +25,13 @@ class Workout {
         
         const workoutName = document.createElement('h2');
         workoutName.innerText = this.name;
+      
+        const workoutDice = document.createElement('h2');
+        workoutDice.innerText = this.dice_set;
     
         workoutList.appendChild(workoutName)
+        // workoutList.appendChild(workoutDice)
+
     };
-
-
 
 }
