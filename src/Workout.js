@@ -1,4 +1,22 @@
 class Workout {
+
+    constructor({id, name, exercises}) {
+        this.id = id;
+        this.name = name;
+        this.exercises = exercises;
+    }
+
+        renderWorkout() {
+        const WorkoutList = document.getElementById('workout-list')
+        diceSetList.classList.add('workout')
+        
+        const workoutName = document.createElement('h1');
+        workoutName.innerText = this.name;
+
+        workoutList.appendChild(workoutName)
+    };
+
+
     // constructor({id, name, side, workouts}) {
     //     this.id = id;
     //     this.name = name;
