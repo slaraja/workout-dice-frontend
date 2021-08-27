@@ -8,8 +8,8 @@ class ExerciseServices {
             fetch(this.baseURL)
             .then(resp => resp.json())
             .then(json => {
-                json.forEach(workout => {
-                 const workouts = new Exercise(exercise);
+                json.forEach(exercise => {
+                 const exercises = new Exercise(exercise);
                   exercises.renderExercise()
                 })
             })

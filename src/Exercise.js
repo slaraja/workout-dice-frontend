@@ -2,41 +2,54 @@ class Exercise {
 
     static all = []
 
-    constructor({id, name, workout}) {
+    constructor({id, name, reps, workout}) {
         this.id = id;
         this.name = name; 
-        this.rep = rep; 
+        this.reps = reps; 
         this.workout = workout;
 
         Exercise.all.push(this)
         //remembers all of the workouts
     }
 
-    static filterByWorkout(filteredWorkout) {
-        if(filteredWorkout){
-            Exercise.all.filter(workout) => {
-                return this.workout.category_id === filteredWorkout.id
-        }
+        renderExercise() {
+        const exerciseList = document.getElementById('exercise-list')
+        workoutList.classList.add('exercise')
+        
+        const exerciseName = document.createElement('h2');
+        exerciseName.innerText = this.name;
+    
+        exerciseList.appendChild(exerciseName)
+        // workoutList.appendChild(workoutDice)
+
+    };
+
+    // display items by Workout
+    static filterByWorkout(filteredWorkout){
+            const filteredEx = Exercise.all.filter((ex) => {
+                return workout.exercise_id === parseInt(filteredWorkout.id)
+        })
     }
+
+
+    
 
 
 }
 
-//         renderExercise() {
-//         const li = document.createElement('li')
-//         li.dataset["id"] = exercise.id
-//         li.id = 'exercise-${exercise.id}'
-//         li.innerHTML = `
-//         <div data-id="${item.id}">
-//         $<span class="price">${item.attributes.price}</span>
-//         <strong class="name">${item.attributes.name}</strong>:
-//         <span class="description">${item.attributes.description}</span> 
-//         </div>
-//         `
+        // renderExercise() {
+        // const li = document.createElement('li')
+        // li.dataset["id"] = exercise.id
+        // li.id = 'exercise-${exercise.id}'
+        // li.innerHTML = `
+        // <div data-id="${exercise.id}">
+        // <span class="name">${exercise.name}</strong>:
+        // </div>
+        // `
 
-//         list.appendChild(li)
+        // list.appendChild(li)
+        // }
 
-// }
 
     // renderExercises(arg){
     //     const Exercise = arg["data"]

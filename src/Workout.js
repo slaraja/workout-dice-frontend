@@ -16,21 +16,20 @@ class Workout {
         workoutList.appendChild(workoutName)
     };
 
-    // setExercisesByWorkout() = (e) {
-    //     let filteredWorkout
-    //     Workout.all.forEach(ex => {
-    //         if(ex.element === ex.element && !this.workout){
-    //         ex.element.classList.add('filtered')
-    //         ex.active = true
-    //         filteredWorkout = ex
-    //     }else{
-    //         ex.element.classList.remove('filtered')
-    //         ex.active = false
-    //     }
+    setExercisesByWorkout = (e) => {
+        let filteredWorkout
+        Workout.all.forEach(ex => {
+            if(ex.element === ex.element && !this.workout){
+            ex.element.classList.add('filtered')
+            ex.active = true
+            filteredWorkout = ex
+        }else{
+            ex.element.classList.remove('filtered')
+            ex.active = false
+        }
             
-    //     // Exercise.filterByWorkout(filteredByWorkout)
-    //     }
-    // })
+        Exercise.filterByWorkout(filteredByWorkout)
+        })
 
 }
 
@@ -71,5 +70,4 @@ class Workout {
     // }
 
 
-
-
+}
