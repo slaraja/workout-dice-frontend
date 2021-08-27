@@ -10,26 +10,33 @@ class Exercise {
 
         Exercise.all.push(this)
         //remembers all of the workouts
-
     }
 
-        renderExercise() {
-        const li = document.getElementById('exercise-list')
-        workoutList.classList.add('exercise')
-        
-        const workoutName = document.createElement('h2');
-        workoutName.innerText = this.name;
-      
-        const workoutDice = document.createElement('h2');
-        workoutDice.innerText = this.dice_set;
-    
-        workoutList.appendChild(workoutName)
-        // workoutList.appendChild(workoutDice)
-
-    };
+    static filterByWorkout(filteredWorkout) {
+        if(filteredWorkout){
+            Exercise.all.filter(workout) => {
+                return this.workout.category_id === filteredWorkout.id
+        }
+    }
 
 
 }
+
+//         renderExercise() {
+//         const li = document.createElement('li')
+//         li.dataset["id"] = exercise.id
+//         li.id = 'exercise-${exercise.id}'
+//         li.innerHTML = `
+//         <div data-id="${item.id}">
+//         $<span class="price">${item.attributes.price}</span>
+//         <strong class="name">${item.attributes.name}</strong>:
+//         <span class="description">${item.attributes.description}</span> 
+//         </div>
+//         `
+
+//         list.appendChild(li)
+
+// }
 
     // renderExercises(arg){
     //     const Exercise = arg["data"]
