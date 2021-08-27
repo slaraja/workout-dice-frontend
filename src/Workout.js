@@ -6,9 +6,9 @@ class Workout {
         this.exercises = exercises;
     }
 
-        renderWorkout() {
-        const WorkoutList = document.getElementById('workout-list')
-        diceSetList.classList.add('workout')
+    renderWorkout() {
+        const workoutList = document.getElementById('workout-list')
+        workoutList.classList.add('workout')
         
         const workoutName = document.createElement('h1');
         workoutName.innerText = this.name;
