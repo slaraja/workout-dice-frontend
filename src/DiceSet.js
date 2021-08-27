@@ -8,25 +8,32 @@ class DiceSet {
 
     // renderDiceSets(arg){
     //     const diceSet = arg["dice"]
-    //     debugger
     //     diceSets.forEach(dice => {
     //     renderDiceSet(dice)
     //     })
     // }
 
-    renderDiceSet() {
+    // renderDiceSet() {
+    //     const diceSetList = document.getElementById('dice-list')
+    //     diceSetList.classList.add('dice')
+        
+    //     const diceSetName = document.createElement('h1');
+    //     diceSetName.innerText = this.name;
+
+    //     diceSetList.appendChild(diceSetName)
+    // };
+    
+    renderDiceSetWorkouts() {
         const diceSetList = document.getElementById('dice-list')
         diceSetList.classList.add('dice')
-        
-        const diceSetName = document.createElement('h1');
-        diceSetName.innerText = this.name;
 
         const diceSetWorkouts = document.createElement('h2');
         diceSetWorkouts.innerText = this.workouts;
-
-        diceSetList.appendChild(diceSetName)
+        debugger
         diceSetList.appendChild(diceSetWorkouts)
-    };
+
+    }
+
 
 };
 

@@ -10,7 +10,7 @@ class DiceSetServices {
         .then(json => {
             json.forEach(dice => {
                 const dicesets = new DiceSet(dice);
-              dicesets.renderDiceSet()
+            dicesets.renderDiceSet()
             })
         })
     }
