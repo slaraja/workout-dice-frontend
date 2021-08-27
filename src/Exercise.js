@@ -13,13 +13,23 @@ class Exercise {
 
     }
 
+        renderExercise() {
+        const li = document.getElementById('exercise-list')
+        workoutList.classList.add('exercise')
+        
+        const workoutName = document.createElement('h2');
+        workoutName.innerText = this.name;
+      
+        const workoutDice = document.createElement('h2');
+        workoutDice.innerText = this.dice_set;
+    
+        workoutList.appendChild(workoutName)
+        // workoutList.appendChild(workoutDice)
 
-    renderExercisesByWorkout(){
-
-    }
+    };
 
 
-    }
+}
 
     // renderExercises(arg){
     //     const Exercise = arg["data"]
@@ -28,20 +38,7 @@ class Exercise {
     //     })
     // }
 
-//     renderWorkout() {
-//         const workoutList = document.getElementById('workout-list')
-//         workoutList.classList.add('workout')
-        
-//         const workoutName = document.createElement('h2');
-//         workoutName.innerText = this.name;
-      
-//         const workoutDice = document.createElement('h2');
-//         workoutDice.innerText = this.dice_set;
-    
-//         workoutList.appendChild(workoutName)
-//         // workoutList.appendChild(workoutDice)
 
-//     };
 
 //     static all = []
 
