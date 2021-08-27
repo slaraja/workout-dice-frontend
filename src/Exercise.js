@@ -14,7 +14,7 @@ class Exercise {
 
         renderExercise() {
         const exerciseList = document.getElementById('exercise-list')
-        workoutList.classList.add('exercise')
+        exerciseList.classList.add('exercise')
         
         const exerciseName = document.createElement('h2');
         exerciseName.innerText = this.name;
