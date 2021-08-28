@@ -10,7 +10,7 @@ class ExerciseServices {
             .then(json => {
                 json.forEach(exercise => {
                  const exercises = new Exercise(exercise);
-                  exercises.renderExercise()
+                  exercises.renderExerciseReps()
                 })
             })
         }

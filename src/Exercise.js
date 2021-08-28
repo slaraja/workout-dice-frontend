@@ -6,13 +6,14 @@ class Exercise {
         this.id = id;
         this.name = name; 
         this.reps = reps; 
-        this.workout_id = workout_id;
+        this.workout = workout;
 
         // Exercise.all.push(this)
         //remembers all of the workouts
     }
 
-        renderExercise() {
+        //renders all of the exercises
+    renderExerciseReps() {
         const exerciseList = document.getElementById('exercise-list')
         exerciseList.classList.add('exercise')
         
@@ -21,19 +22,18 @@ class Exercise {
     
         exerciseList.appendChild(exerciseReps)
 
-        const WorkoutReps = this.renderReps() //returns the ul
-        renderReps.appendChild(exerciseReps)
+        const workoutUL = this.renderWorkouts() //returns the ul
+        exerciseReps.appendChild(workoutUL)
 
     };
 
-
     renderWorkouts(arg){
-        const workouts = this.workouts
+        const workout = this.workout
         const ul = document.createElement('ul');
-        exercises.forEach(workout => {
-            console.log(workout)
+        workout.forEach(w => {
+            console.log(w)
             const li = document.createElement('li')
-            li.innerText = workout.name
+            li.innerText = w.id
 
             ul.appendChild(li)
 

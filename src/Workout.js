@@ -1,9 +1,13 @@
 class Workout {
 
+    static all = [];
+
     constructor({id, name, exercises}) {
         this.id = id;
         this.name = name;
         this.exercises = exercises;
+
+    Workout.all.push(this)
     }
 
     renderWorkout() {
@@ -25,15 +29,37 @@ class Workout {
         //make sure each one is an instance of the exercise class, like in workout
         exercises.forEach(exercise => {
             console.log(exercise)
-            const li = document.createElement('li')
-            li.innerText = exercise.name
 
-            ul.appendChild(li)
+            const nameLi = document.createElement('li')
+            nameLi.innerText = exercise.name
+
+            const repsP = document.createElement('p')
+            repsP.innerText = exercise.reps
+
+
+            ul.appendChild(nameLi)
+            ul.appendChild(repsP)
 
         })
         return ul
     }
 
+    // renderExercises(arg){
+    //     const exercises = this.exercises
+    //     const ul = document.createElement('ul');
+    //     //make sure each one is an instance of the exercise class, like in workout
+    //     exercises.forEach(exercise => {
+    //         console.log(exercise)
+    //         const li = document.createElement('li')
+    //         li.innerText = exercise.name
+
+    //         ul.appendChild(li)
+
+    //     })
+    //     return ul
+    // }
+
+    }
  
 
 //     setExercisesByWorkout = (e) => {
@@ -77,6 +103,3 @@ class Workout {
 
     // //     diceSetList.appendChild(diceSetName)
     // // };
-
-
-}
