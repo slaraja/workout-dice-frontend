@@ -12,10 +12,11 @@ class Workout {
 
     renderWorkout() {
         const workoutList = document.getElementById('workout-list')
-        workoutList.classList.add('workout')
+        workoutList.classList.add(`workout-${this.id}`)
         
         const workoutName = document.createElement('h1');
         workoutName.innerText = this.name;
+        workoutName.classList.add(`${this.id}`)
 
         workoutList.appendChild(workoutName)
 
@@ -44,13 +45,13 @@ class Workout {
         return ul
     }
 
-    addDropDown(){
-        // const chooseWorkout = document.createElement('choose')
-        const chooseWorkout = document.getElementById('workout-dropdown');
-        option.value = this.id
-        option.innerText = this.name
-        this.addDropDown.append(chooseWorkout)
-    }
+    // addDropDown(){
+    //     // const chooseWorkout = document.createElement('choose')
+    //     const chooseWorkout = document.getElementById('workout-dropdown');
+    //     chooseWorkout.value = this.id
+    //     chooseWorkout.innerText = this.name
+    //     addDropDown.append(chooseWorkout)
+    // }
 
 }
 
