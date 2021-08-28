@@ -1,6 +1,6 @@
 class Exercise {
 
-    static all = []
+    // static all = []
 
     constructor({id, name, reps, workout}) {
         this.id = id;
@@ -8,7 +8,7 @@ class Exercise {
         this.reps = reps; 
         this.workout = workout;
 
-        Exercise.all.push(this)
+        // Exercise.all.push(this)
         //remembers all of the workouts
     }
 
@@ -16,13 +16,31 @@ class Exercise {
         const exerciseList = document.getElementById('exercise-list')
         exerciseList.classList.add('exercise')
         
-        const exerciseName = document.createElement('h2');
-        exerciseName.innerText = this.name;
+        const exerciseReps = document.createElement('h2');
+        exerciseReps.innerText = this.reps;
     
-        exerciseList.appendChild(exerciseName)
-        // workoutList.appendChild(workoutDice)
+        exerciseList.appendChild(exerciseReps)
+
+        const WorkoutReps = this.renderReps() //returns the ul
+        renderReps.appendChild(exerciseReps)
 
     };
+
+
+    renderReps(arg){
+        const exerciseReps = this.reps
+        const ul = document.createElement('ul');
+        //make sure each one is an instance of the exercise class, like in workout
+        exercises.forEach(exerciseReps => {
+            console.log(exerciseReps)
+            const li = document.createElement('li')
+            li.innerText = exerciseReps.name
+
+            ul.appendChild(li)
+
+        })
+        return ul
+    }
 
     // display items by Workout
     // static filterByWorkout(filteredWorkout){
