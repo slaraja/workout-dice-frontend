@@ -44,6 +44,15 @@ class Workout {
         return ul
     }
 
+    addDropDown(){
+        const chooseWorkout = document.createElement('choose')
+        option.value = this.id
+        option.innerText = this.name
+        this.addDropDown.append(chooseWorkout)
+    }
+
+}
+
     // renderExercises(arg){
     //     const exercises = this.exercises
     //     const ul = document.createElement('ul');
@@ -59,7 +68,6 @@ class Workout {
     //     return ul
     // }
 
-    }
  
 
 //     setExercisesByWorkout = (e) => {
