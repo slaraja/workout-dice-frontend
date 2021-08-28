@@ -13,19 +13,19 @@ class Exercise {
     }
 
         //renders all of the exercises
-    renderExerciseReps() {
-        const exerciseList = document.getElementById('exercise-list')
-        exerciseList.classList.add('exercise')
+    // renderExerciseReps() {
+    //     const exerciseList = document.getElementById('exercise-list')
+    //     exerciseList.classList.add('exercise')
         
-        const exerciseReps = document.createElement('h2');
-        exerciseReps.innerText = this.reps;
+    //     const exerciseReps = document.createElement('h2');
+    //     exerciseReps.innerText = this.reps;
     
-        exerciseList.appendChild(exerciseReps)
+    //     exerciseList.appendChild(exerciseReps)
 
-        const workoutUL = this.renderWorkouts() //returns the ul
-        exerciseReps.appendChild(workoutUL)
+    //     const workoutUL = this.renderWorkouts() //returns the ul
+    //     exerciseReps.appendChild(workoutUL)
 
-    };
+    // };
 
     // renderWorkouts(arg){
     //     const workout = this.workout
