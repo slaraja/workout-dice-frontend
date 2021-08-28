@@ -27,19 +27,19 @@ class Exercise {
 
     };
 
-    renderWorkouts(arg){
-        const workout = this.workout
-        const ul = document.createElement('ul');
-        workout.forEach(w => {
-            console.log(w)
-            const li = document.createElement('li')
-            li.innerText = w.id
+    // renderWorkouts(arg){
+    //     const workout = this.workout
+    //     const ul = document.createElement('ul');
+    //     workout.forEach(w => {
+    //         console.log(w)
+    //         const li = document.createElement('li')
+    //         li.innerText = w.id
 
-            ul.appendChild(li)
+    //         ul.appendChild(li)
 
-        })
-        return ul
-    }
+    //     })
+    //     return ul
+    // }
 
     // display items by Workout
     // static filterByWorkout(filteredWorkout){
