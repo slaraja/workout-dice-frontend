@@ -15,6 +15,15 @@ class ExerciseServices {
             })
         }
 
+    createExercise(){
+         const exerciseDetails = {
+             name: this.name.value,
+             reps: this.reps.value,
+            workout: this.id.value
+         }
+        
+    }
+
 }
 
 //    constructor(baseURL) {
