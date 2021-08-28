@@ -12,7 +12,6 @@ class Exercise {
         //remembers all of the workouts
     }
 
-        //renders all of the exercises
         renderExercise() {
             const exerciseList = document.createElement('div')
             exerciseList.classList.add(`exercise-${this.id}`)
@@ -25,6 +24,10 @@ class Exercise {
             renderedWorkouts.appendChild(exerciseList)
     
         };
+
+
+ 
+
 }
     // renderExercise() {
     //     const exerciseList = document.getElementById('exercise-list')
