@@ -13,7 +13,6 @@ class Exercise {
     }
 
         //renders all of the exercises
-
         renderExercise() {
             const exerciseList = document.createElement('div')
             exerciseList.classList.add(`exercise-${this.id}`)
@@ -26,6 +25,7 @@ class Exercise {
             renderedWorkouts.appendChild(exerciseList)
     
         };
+}
     // renderExercise() {
     //     const exerciseList = document.getElementById('exercise-list')
     //     exerciseList.classList.add('exercise')
@@ -60,12 +60,6 @@ class Exercise {
     //             return workout.exercise_id === parseInt(filteredWorkout.id)
     //     })
     // }
-
-
-    
-
-
-}
 
         // renderExercise() {
         // const li = document.createElement('li')

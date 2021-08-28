@@ -7,7 +7,7 @@ class ExerciseServices {
 
 //handle submit gets an event obj arg automatically
     handleSubmit(event){
-        event.preventDefault() //otherwise will send a post request
+        // event.preventDefault() //otherwise will send a post request
         const nameInputField = event.target.querySelector('#name-input')
         const repsInputField = event.target.querySelector('#reps-input')
         const workoutInputField = event.target.querySelector('#workout-dropdown')
@@ -20,24 +20,28 @@ class ExerciseServices {
         }
 
     //creates a p tag
-    const exercisePTag = document.createElement('p')
-    const exercisePTagReps = document.createElement('p')
+        const exercisePTag = document.createElement('p')
+        const exercisePTagReps = document.createElement('p')
 
-    const configObj = {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-        },
-        body: JSON.stringify(inputs)
-    }
+        const configObj = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(inputs)
+        }
 
         fetch("http://localhost:3000/exercises", configObj)
         .then(r => r.json())
         .then(json => {
             const newExercise = new Exercise(json)
             newExercise.renderExercise()
-            event.target.reset()
+            event.target()
+     //     event.target.reset()
+            event.preventDefault() //otherwise will send a post request
+
+
         })
      
     }
