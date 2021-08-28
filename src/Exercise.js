@@ -6,7 +6,7 @@ class Exercise {
         this.id = id;
         this.name = name; 
         this.reps = reps; 
-        this.workout = workout;
+        this.workout_id = workout_id;
 
         // Exercise.all.push(this)
         //remembers all of the workouts
@@ -27,14 +27,13 @@ class Exercise {
     };
 
 
-    renderReps(arg){
-        const exerciseReps = this.reps
+    renderWorkouts(arg){
+        const workouts = this.workouts
         const ul = document.createElement('ul');
-        //make sure each one is an instance of the exercise class, like in workout
-        exercises.forEach(exerciseReps => {
-            console.log(exerciseReps)
+        exercises.forEach(workout => {
+            console.log(workout)
             const li = document.createElement('li')
-            li.innerText = exerciseReps.name
+            li.innerText = workout.name
 
             ul.appendChild(li)
 
