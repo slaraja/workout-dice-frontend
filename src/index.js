@@ -6,10 +6,7 @@ const exerciseEndPoint = new ExerciseServices('http://localhost:3000/exercises')
 //using in more than one place
 const chooseWorkout = document.createElement('choose')
 
-const exerciseDetails = {
-        name: nameInput.value,
-        reps: repsInput.value
-}
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

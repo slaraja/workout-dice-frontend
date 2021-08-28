@@ -45,6 +45,8 @@ class Workout {
     }
 
     addDropDown(){
+        // const chooseWorkout = document.createElement('choose')
+        const chooseWorkout = document.getElementById('workout-dropdown');
         option.value = this.id
         option.innerText = this.name
         this.addDropDown.append(chooseWorkout)
