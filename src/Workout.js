@@ -14,7 +14,26 @@ class Workout {
         workoutName.innerText = this.name;
 
         workoutList.appendChild(workoutName)
+
+        const exerciseUL = this.renderExercises() //returns the ul
+        workoutName.appendChild(exerciseUL)
     };
+
+    renderExercises(arg){
+        const exercises = this.exercises
+        const ul = document.createElement('ul');
+        //make sure each one is an instance of the exercise class, like in workout
+        exercises.forEach(exercise => {
+            console.log(exercise)
+            const li = document.createElement('li')
+            li.innerText = exercise.name
+
+            ul.appendChild(li)
+
+        })
+        return ul
+    }
+ 
 
     setExercisesByWorkout = (e) => {
         let filteredWorkout
@@ -57,17 +76,6 @@ class Workout {
 
     // //     diceSetList.appendChild(diceSetName)
     // // };
-    
-    // renderDiceSetWorkouts() {
-    //     const diceSetList = document.getElementById('dice-list')
-    //     diceSetList.classList.add('dice')
-
-    //     const diceSetWorkouts = document.createElement('h2');
-    //     diceSetWorkouts.innerText = this.workouts;
-    //     debugger
-    //     diceSetList.appendChild(diceSetWorkouts)
-
-    // }
 
 
 }

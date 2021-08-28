@@ -25,11 +25,11 @@ class Exercise {
     };
 
     // display items by Workout
-    static filterByWorkout(filteredWorkout){
-            const filteredEx = Exercise.all.filter((ex) => {
-                return workout.exercise_id === parseInt(filteredWorkout.id)
-        })
-    }
+    // static filterByWorkout(filteredWorkout){
+    //         const filteredEx = Exercise.all.filter((ex) => {
+    //             return workout.exercise_id === parseInt(filteredWorkout.id)
+    //     })
+    // }
 
 
     
