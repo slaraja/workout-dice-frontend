@@ -31,6 +31,17 @@ class Exercise {
     
         };
 
+        // deleteExerciseButton() {
+        //     const deleteButton = document.createElement('button');
+        //     deleteButton.classList.add('delete-button');
+        //     deleteBookutton.id = `deletebutton-${this.id}`
+        //     deleteBookBtn.innerText = 'Delete';
+        //     deleteBookBtn.addEventListener('click', (event) => {
+        //         this.handleDelete(event);
+        //     });
+        //     return deleteButton;
+        // }
+
         // renderExercise() {
         //     const exerciseList = document.createElement('div')
         //     exerciseList.classList.add(`exercise-${this.id}`)

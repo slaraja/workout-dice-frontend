@@ -7,7 +7,6 @@ const exerciseEndPoint = new ExerciseServices('http://localhost:3000/exercises')
 
 document.addEventListener('DOMContentLoaded', () => {
     workoutEndPoint.getWorkouts();
-    // exerciseEndPoint.getExercises();
     form.addEventListener('submit', exerciseEndPoint.handleSubmit);
 
 })

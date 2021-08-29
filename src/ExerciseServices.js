@@ -34,7 +34,7 @@ class ExerciseServices {
             body: JSON.stringify(inputs)
         }
 
-        fetch(baseURL, configObj)
+        fetch('http://localhost:3000/exercises', configObj)
         .then(r => r.json())
         .then(json => {
             const newExercise = new Exercise(json)
@@ -58,27 +58,36 @@ class ExerciseServices {
     }
 
     
-    const deleteExercise = (id, e) =>{
+//     deleteExercise(event) {
     
-        const configObj = {
-            method: 'DELETE',
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-            }
-        }
+//         const configObj = {
+//             method: 'DELETE',
+//             headers: {
+//                 "Content-Type": "application/json",
+//                 Accept: "application/json"
+//             }
+//         }
         
-        fetch(`http://localhost:3000/exercises/${id}`, configObj)
-            .then(r => r.json())
-            .then(json => alert(json.message))
+//         fetch(`http://localhost:3000/exercises/${id}`, configObj)
+//             .then(r => r.json())
+//             .then(json => alert(json.message))
 
-    //removes from DOM
-    fetch(`${baseUrl}/${id}`, configObj)
-    e.remove();
-    }
-
-    
+//     //removes from DOM
+//         fetch(`${baseUrl}/${id}`, configObj)
+//         event.remove();
+//     }
 }
+
+    // form.addEventListener( 'submit', function( ev ) {
+    //     var text = field.value;
+    //     if ( text !== '' ) {
+    //       todo.innerHTML += '<li>' + text + ' <button onclick="Delete(this);">Delete</button> </li>';
+    //       field.value = '';
+    //       //field.focus();
+    //     }
+    //     ev.preventDefault();
+    //   }, false);
+    
 
     // getExercises(){
     //         fetch(this.baseURL)
