@@ -25,10 +25,6 @@ class ExerciseServices {
             workout_id: workoutInputField.value,
         }
 
-    //creates a p tag
-        // const exercisePTag = document.createElement('p')
-        // const exercisePTagReps = document.createElement('p')
-
         const configObj = {
             method: 'POST',
             headers: {
@@ -38,7 +34,7 @@ class ExerciseServices {
             body: JSON.stringify(inputs)
         }
 
-        fetch("http://localhost:3000/exercises", configObj)
+        fetch(baseURL, configObj)
         .then(r => r.json())
         .then(json => {
             const newExercise = new Exercise(json)
@@ -61,7 +57,8 @@ class ExerciseServices {
      
     }
 
-    deleteExercise(e){
+    
+    const deleteExercise = (id, e) =>{
     
         const configObj = {
             method: 'DELETE',
@@ -74,8 +71,13 @@ class ExerciseServices {
         fetch(`http://localhost:3000/exercises/${id}`, configObj)
             .then(r => r.json())
             .then(json => alert(json.message))
-    
+
+    //removes from DOM
+    fetch(`${baseUrl}/${id}`, configObj)
+    e.remove();
     }
+
+    
 }
 
     // getExercises(){
