@@ -24,7 +24,7 @@ class Workout {
     };
 
     // renderExercises(arg){
-    renderExercises(arg){
+    renderExercises(){
 
         const exercises = this.exercises
         const ul = document.createElement('ul');
@@ -37,7 +37,6 @@ class Workout {
 
             const repsP = document.createElement('p')
             repsP.innerText = exercise.reps
-
 
             ul.appendChild(nameLi)
             ul.appendChild(repsP)

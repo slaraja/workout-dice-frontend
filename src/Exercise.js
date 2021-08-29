@@ -7,40 +7,53 @@ class Exercise {
         this.name = name; 
         this.reps = reps; 
         this.workout_id = workout_id;
+    }
+
+    renderDelete(){
+        const deleteButton = document.createElement('button')
+
+    
+        }
+}
+
+
+
+    `
+    list.appendChild(li)
+    li.addEventListener('click', handleLiClick)
 
         // Exercise.all.push(this)
         //remembers all of the workouts
-    }
 
-        //renders all of the exercises
-        renderExercise() {
-            const workoutList = document.getElementById('exercise-list')
-            exerciseList.classList.add(`exercise-${this.id}`)
+        // //renders all of the exercises
+        // renderExercise() {
+        //     const workoutList = document.getElementById('exercise-list')
+        //     exerciseList.classList.add(`exercise-${workout_id}`)
            
-            const exerciseName = document.createElement('div');
-            exerciseNameinnerText = this.name;
-            exerciseName.classList.add(`${this.id}`)
+        //     const exerciseName = document.createElement('div');
+        //     exerciseNameinnerText = this.name;
+        //     exerciseName.classList.add(`${workout_id}`)
 
-            exerciseRepsinnerText = this.reps;
-            exerciseReps.classList.add(`${this.id}`)
-    
-            exerciseList.appendChild(exerciseName)
-    
-            const workoutUL = this.renderWorkout() //returns the ul
-            workoutName.appendChild(workoutUL)
-    
-        };
+        //     exerciseRepsinnerText = this.reps;
+        //     exerciseReps.classList.add(`${workout_id}`)
 
-        // deleteExerciseButton() {
-        //     const deleteButton = document.createElement('button');
-        //     deleteButton.classList.add('delete-button');
-        //     deleteBookutton.id = `deletebutton-${this.id}`
-        //     deleteBookBtn.innerText = 'Delete';
-        //     deleteBookBtn.addEventListener('click', (event) => {
-        //         this.handleDelete(event);
-        //     });
-        //     return deleteButton;
-        // }
+        //     // exerciseList.classList.add(`exercise-${this.id}`)
+           
+        //     // const exerciseName = document.createElement('div');
+        //     // exerciseNameinnerText = this.name;
+        //     // exerciseName.classList.add(`${this.id}`)
+
+        //     // exerciseRepsinnerText = this.reps;
+        //     // exerciseReps.classList.add(`${this.id}`)
+    
+        //     exerciseList.appendChild(exerciseName)
+    
+        //     const workoutUL = this.renderWorkout() //returns the ul
+        //     workoutName.appendChild(workoutUL)
+    
+        // };
+
+   
 
         // renderExercise() {
         //     const exerciseList = document.createElement('div')
@@ -55,7 +68,6 @@ class Exercise {
     
         // };
 
-}
     // renderExercise() {
     //     const exerciseList = document.getElementById('exercise-list')
     //     exerciseList.classList.add('exercise')
