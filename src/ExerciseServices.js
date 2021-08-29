@@ -12,6 +12,12 @@ class ExerciseServices {
         const repsInputField = event.target.querySelector('#reps-input')
         const workoutInputField = event.target.querySelector('#workout-dropdown')
 
+        // const nameInputField = document.getElementById('name-input')
+        // const repsInputField = document.getElementById('reps-input')
+        // const workoutInputField = document.getElementById('workout-dropdown')
+        const form = document.getElementById('form');
+
+
     //grab the value of what the user types into the field
         const inputs = {
             name: nameInputField.value,
@@ -20,8 +26,8 @@ class ExerciseServices {
         }
 
     //creates a p tag
-        const exercisePTag = document.createElement('p')
-        const exercisePTagReps = document.createElement('p')
+        // const exercisePTag = document.createElement('p')
+        // const exercisePTagReps = document.createElement('p')
 
         const configObj = {
             method: 'POST',
@@ -36,10 +42,23 @@ class ExerciseServices {
         .then(r => r.json())
         .then(json => {
             const newExercise = new Exercise(json)
-            newExercise.renderExercise()
-            event.target()
+            // new line
+            const workoutList = document.getElementById('workout-list')
+            // new line
+            const appendedExercise = newExercise.renderExercises()
+            workoutList.appendChild(appendedExercise)
+
+
+            // const workout = document.getElementById("workout_id")
+            // // debugger
+
+            // workout.appendChild(appendedExercise)
+            // event.target()
+            form.reset()
+            event.preventDefault()
+
      //     event.target.reset()
-            event.preventDefault() //otherwise will send a post request
+             // event.preventDefault() //otherwise will send a post request
 
 
         })

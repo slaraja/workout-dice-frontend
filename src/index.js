@@ -3,7 +3,6 @@
 
 const workoutEndPoint = new WorkoutServices('http://localhost:3000/workouts');
 const exerciseEndPoint = new ExerciseServices('http://localhost:3000/exercises');
-const form = document.getElementById('form');
 
 
 document.addEventListener('DOMContentLoaded', () => {

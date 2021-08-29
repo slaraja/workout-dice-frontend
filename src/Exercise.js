@@ -12,21 +12,37 @@ class Exercise {
         //remembers all of the workouts
     }
 
+        //renders all of the exercises
         renderExercise() {
-            const exerciseList = document.createElement('div')
+            const workoutList = document.getElementById('exercise-list')
             exerciseList.classList.add(`exercise-${this.id}`)
-            exerciseList.innerHTML = `
-                <p>${this.name}</p>  
-                <p>${this.reps}</p> 
-                `
-                
-            const renderedWorkouts = document.getElementById(`h1-${this.workout_id}`)
-            renderedWorkouts.appendChild(exerciseList)
+           
+            const exerciseName = document.createElement('div');
+            exerciseNameinnerText = this.name;
+            exerciseName.classList.add(`${this.id}`)
+
+            exerciseRepsinnerText = this.reps;
+            exerciseReps.classList.add(`${this.id}`)
+    
+            exerciseList.appendChild(exerciseName)
+    
+            const workoutUL = this.renderWorkout() //returns the ul
+            workoutName.appendChild(workoutUL)
     
         };
 
-
- 
+        // renderExercise() {
+        //     const exerciseList = document.createElement('div')
+        //     exerciseList.classList.add(`exercise-${this.id}`)
+        //     exerciseList.innerHTML = `
+        //         <p>${this.name}</p>  
+        //         <p>${this.reps}</p> 
+        //         `
+                
+        //     const renderedWorkouts = document.getElementById(`h1-${this.workout_id}`)
+        //     renderedWorkouts.appendChild(exerciseList)
+    
+        // };
 
 }
     // renderExercise() {
