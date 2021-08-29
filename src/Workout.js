@@ -23,37 +23,82 @@ class Workout {
         workoutName.appendChild(exerciseUL)
     };
 
-    // renderExercises(arg){
     renderExercises(){
 
         const exercises = this.exercises
         const ul = document.createElement('ul');
         //make sure each one is an instance of the exercise class, like in workout
         exercises.forEach(exercise => {
-            console.log(exercise)
+            console.log(exercise, "exercise")
 
             const nameLi = document.createElement('li')
             nameLi.innerText = exercise.name
+            
+            const deleteButton = document.createElement('button')
+            deleteButton.innerText = "Delete"
+
+            deleteButton.id = exercise.id
+
+            deleteButton.addEventListener('click', function (event) {
+                event.preventDefault()
+                console.log(event.target.id, "event target")
+
+            const configObj = {
+                method: 'DELETE',
+                headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            }
+        }
+
+            fetch(`http://localhost:3000/exercises/${event.target.id}`, configObj)
+            .then(r => r.json())
+            .then(json => alert(json.message)) 
+
+
+            // remove the deleteButton ELEMENT from the dom
+            fetch(`http://localhost:3000/exercises/${event.target.id}`, configObj)
+
+            deleteButton.remove();
+
+            })
+
+            // const link = document.createElement('a')
+            // link.innerText = 'link'
 
             const repsP = document.createElement('p')
             repsP.innerText = exercise.reps
 
             ul.appendChild(nameLi)
             ul.appendChild(repsP)
+            ul.appendChild(deleteButton)
+            // ul.appendChild(link)
+
 
         })
         return ul
     }
 
-    // addDropDown(){
-    //     // const chooseWorkout = document.createElement('choose')
-    //     const chooseWorkout = document.getElementById('workout-dropdown');
-    //     chooseWorkout.value = this.id
-    //     chooseWorkout.innerText = this.name
-    //     addDropDown.append(chooseWorkout)
-    // }
-
 }
+
+    // deleteExercise(event) {
+    
+    //     const configObj = {
+    //         method: 'DELETE',
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             Accept: "application/json"
+    //         }
+    //     }
+        
+    //     fetch(`http://localhost:3000/exercises/${id}`, configObj)
+    //         .then(r => r.json())
+    //         .then(json => alert(json.message))
+
+    // //removes from DOM
+    //     fetch(`${baseUrl}/${id}`, configObj)
+    //     event.remove();
+    // }
 
     // renderExercises(arg){
     //     const exercises = this.exercises

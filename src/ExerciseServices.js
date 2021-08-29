@@ -7,7 +7,7 @@ class ExerciseServices {
 
 //handle submit gets an event obj arg automatically
     handleSubmit(event){
-        // event.preventDefault() //otherwise will send a post request
+        event.preventDefault() //otherwise will send a post request
         const nameInputField = event.target.querySelector('#name-input')
         const repsInputField = event.target.querySelector('#reps-input')
         const workoutInputField = event.target.querySelector('#workout-dropdown')
@@ -33,14 +33,13 @@ class ExerciseServices {
             },
             body: JSON.stringify(inputs)
         }
-
+        console.log("configObj", configObj)
         fetch('http://localhost:3000/exercises', configObj)
         .then(r => r.json())
         .then(json => {
             const newExercise = new Exercise(json)
             // check workout-list - does not exist
             const workoutList = document.getElementById('workout-list')
-            // new line
             const appendedExercise = newExercise.renderExercises()
             workoutList.appendChild(appendedExercise)
 
@@ -51,31 +50,12 @@ class ExerciseServices {
             // workout.appendChild(appendedExercise)
             // event.target()
             form.reset()
-            event.preventDefault()
 
         })
      
     }
 
-    
-    deleteExercise(event) {
-    
-        const configObj = {
-            method: 'DELETE',
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-            }
-        }
-        
-        fetch(`http://localhost:3000/exercises/${id}`, configObj)
-            .then(r => r.json())
-            .then(json => alert(json.message))
 
-    //removes from DOM
-        fetch(`${baseUrl}/${id}`, configObj)
-        event.remove();
-    }
 }
 
     // form.addEventListener( 'submit', function( ev ) {

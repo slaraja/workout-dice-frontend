@@ -9,16 +9,16 @@ class Exercise {
         this.workout_id = workout_id;
     }
 
-    renderDelete() {
-        const delButton = document.createElement('button')
-        delButton.classList.add('delete-button');
-        delButton.id = `deletebtn-${this.id}`
-        delButton.innerText = 'Delete';
-        delButton.addEventListener('click', (event) => {
-            this.deleteExercise(event);
-        });
-        return delButton;   
-    }
+    // renderDelete() {
+    //     const delButton = document.createElement('button')
+    //     delButton.classList.add('delete-button');
+    //     delButton.id = `deletebtn-${this.id}`
+    //     delButton.innerText = 'Delete';
+    //     delButton.addEventListener('click', (event) => {
+    //         this.deleteExercise(event);
+    //     });
+    //     return delButton;   
+    // }
 }
 
 
