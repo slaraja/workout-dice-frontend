@@ -42,7 +42,7 @@ class ExerciseServices {
         .then(r => r.json())
         .then(json => {
             const newExercise = new Exercise(json)
-            // new line
+            // check workout-list - does not exist
             const workoutList = document.getElementById('workout-list')
             // new line
             const appendedExercise = newExercise.renderExercises()
@@ -57,12 +57,24 @@ class ExerciseServices {
             form.reset()
             event.preventDefault()
 
-     //     event.target.reset()
-             // event.preventDefault() //otherwise will send a post request
-
-
         })
      
+    }
+
+    deleteExercise(e){
+    
+        const configObj = {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            }
+        }
+        
+        fetch(`http://localhost:3000/exercises/${id}`, configObj)
+            .then(r => r.json())
+            .then(json => alert(json.message))
+    
     }
 }
 
