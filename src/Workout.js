@@ -43,6 +43,14 @@ class Workout {
                 event.preventDefault()
                 console.log(event.target.id, "event target")
 
+                const repsP = document.createElement('p')
+                repsP.innerText = exercise.reps
+    
+                nameLi.appendChild(repsP)
+                nameLi.appendChild(deleteButton)
+
+            //create delete request in exerciseservices and invoke it in exercise.js  
+
             const configObj = {
                 method: 'DELETE',
                 headers: {
@@ -57,21 +65,24 @@ class Workout {
 
 
             // remove the deleteButton ELEMENT from the dom
-            fetch(`http://localhost:3000/exercises/${event.target.id}`, configObj)
+            // fetch(`http://localhost:3000/exercises/${event.target.id}`, configObj)
 
-            deleteButton.remove();
+            // const repsP = document.createElement('p')
+            // repsP.innerText = exercise.reps
+
+            // nameLi.appendChild(repsP)
+            // nameLi.appendChild(deleteButton)
+            nameLi.remove()
+            // deleteButton.remove();
 
             })
 
             // const link = document.createElement('a')
             // link.innerText = 'link'
 
-            const repsP = document.createElement('p')
-            repsP.innerText = exercise.reps
-
             ul.appendChild(nameLi)
-            ul.appendChild(repsP)
-            ul.appendChild(deleteButton)
+            // ul.appendChild(repsP)
+            // ul.appendChild(deleteButton)
             // ul.appendChild(link)
 
 
