@@ -1,29 +1,32 @@
 class Exercise {
 
-    // static all = []
-
     constructor({id, name, reps, workout_id}) {
         this.id = id;
         this.name = name; 
         this.reps = reps; 
         this.workout_id = workout_id;
+
     }
 
-    // renderDelete() {
-    //     const delButton = document.createElement('button')
-    //     delButton.classList.add('delete-button');
-    //     delButton.id = `deletebtn-${this.id}`
-    //     delButton.innerText = 'Delete';
-    //     delButton.addEventListener('click', (event) => {
-    //         this.deleteExercise(event);
-    //     });
-    //     return delButton;   
-    // }
+        renderExercise() {
+        const exerciseList = document.getElementById('exercise-list')
+        exerciseList.classList.add('exercise')
+
+        const exerciseName = document.createElement('h2');
+        exerciseName.innerText = this.name;
+        
+        const exerciseReps = document.createElement('h2');
+        exerciseReps.innerText = this.reps;
+    
+        exerciseList.appendChild(exerciseName)
+        exerciseList.appendChild(exerciseReps)
+
+        const workoutUL = this.renderWorkouts() //returns the ul
+        exerciseReps.appendChild(workoutUL)
+
+    };
+
 }
-
-
-
-
 
     // `
     // list.appendChild(li)
@@ -32,7 +35,6 @@ class Exercise {
     //     // Exercise.all.push(this)
     //     //remembers all of the workouts
 
-    //     // //renders all of the exercises
     //     // renderExercise() {
     //     //     const workoutList = document.getElementById('exercise-list')
     //     //     exerciseList.classList.add(`exercise-${workout_id}`)
@@ -75,19 +77,7 @@ class Exercise {
     
         // };
 
-    // renderExercise() {
-    //     const exerciseList = document.getElementById('exercise-list')
-    //     exerciseList.classList.add('exercise')
-        
-    //     const exerciseReps = document.createElement('h2');
-    //     exerciseReps.innerText = this.reps;
-    
-    //     exerciseList.appendChild(exerciseReps)
 
-    //     const workoutUL = this.renderWorkouts() //returns the ul
-    //     exerciseReps.appendChild(workoutUL)
-
-    // };
 
     // renderWorkouts(arg){
     //     const workout = this.workout

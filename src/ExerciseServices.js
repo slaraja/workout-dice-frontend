@@ -41,9 +41,8 @@ class ExerciseServices {
             // check workout-list - does not exist
             const workoutList = document.getElementById('workout-list')
             const appendedExercise = newExercise.renderExercises()
-            //create renderExercise within exercise.js and call it here
+            //create renderExercise and call it here
             workoutList.appendChild(appendedExercise)
-
 
             // const workout = document.getElementById("workout_id")
             // // debugger
@@ -55,6 +54,8 @@ class ExerciseServices {
         })
      
     }
+
+
 
 
 }
