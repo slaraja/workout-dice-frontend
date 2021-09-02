@@ -62,11 +62,6 @@ class Workout {
             .then(r => r.json())
             .then(json => alert(json.message)) 
 
-            // const repsP = document.createElement('p')
-            // repsP.innerText = exercise.reps
-
-            // nameLi.appendChild(repsP)
-            // nameLi.appendChild(deleteButton)
             nameLi.remove()
 
 

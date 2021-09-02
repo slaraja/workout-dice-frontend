@@ -8,25 +8,45 @@ class Exercise {
 
     }
 
-        renderExercise() {
-        const exerciseList = document.getElementById('exercise-list')
-        exerciseList.classList.add('exercise')
 
-        const exerciseName = document.createElement('h2');
-        exerciseName.innerText = this.name;
+    renderExercise = () => {
+            const exerciseList = document.getElementById('exercise-list')
+            exerciseList.classList.add('exercise')
+
+            const exerciseName = document.createElement('h2');
+            exerciseName.innerText = this.name;
+            
+            const exerciseReps = document.createElement('h2');
+            exerciseReps.innerText = this.reps;
         
-        const exerciseReps = document.createElement('h2');
-        exerciseReps.innerText = this.reps;
-    
-        exerciseList.appendChild(exerciseName)
-        exerciseList.appendChild(exerciseReps)
+            exerciseList.appendChild(exerciseName)
+            exerciseList.appendChild(exerciseReps)
 
-        const workoutUL = this.renderWorkouts() //returns the ul
-        exerciseReps.appendChild(workoutUL)
+            return exerciseList
+      
+      };
 
-    };
+    }
 
-}
+    //     renderExercise() {
+    //         const exerciseList = document.getElementById('exercise-list')
+    //         exerciseList.classList.add('exercise')
+
+    //         const exerciseName = document.createElement('h2');
+    //         exerciseName.innerText = this.name;
+            
+    //         const exerciseReps = document.createElement('h2');
+    //         exerciseReps.innerText = this.reps;
+        
+    //         exerciseList.appendChild(exerciseName)
+    //         exerciseList.appendChild(exerciseReps)
+
+    //         const workoutUL = this.renderWorkouts() //returns the ul
+    //         exerciseReps.appendChild(workoutUL)
+
+    // };
+    //   };
+
 
     // `
     // list.appendChild(li)

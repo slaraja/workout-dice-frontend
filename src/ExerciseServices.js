@@ -38,9 +38,10 @@ class ExerciseServices {
         .then(r => r.json())
         .then(json => {
             const newExercise = new Exercise(json)
-            // check workout-list - does not exist
             const workoutList = document.getElementById('workout-list')
-            const appendedExercise = newExercise.renderExercises()
+            // const appendedExercise = newExercise.renderExercises()
+            const appendedExercise = newExercise.renderExercise()
+
             //create renderExercise and call it here
             workoutList.appendChild(appendedExercise)
 
@@ -54,9 +55,6 @@ class ExerciseServices {
         })
      
     }
-
-
-
 
 }
 
