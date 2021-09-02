@@ -23,8 +23,10 @@ class Exercise {
             exerciseList.appendChild(exerciseReps)
 
             return exerciseList
-      
+
       };
+
+
 
     }
 
