@@ -38,12 +38,11 @@ class ExerciseServices {
         .then(r => r.json())
         .then(json => {
             const newExercise = new Exercise(json)
+            // check workout-list - does not exist
             const workoutList = document.getElementById('workout-list')
-            // const appendedExercise = newExercise.renderExercises()
             const appendedExercise = newExercise.renderExercise()
-
-            //create renderExercise and call it here
             workoutList.appendChild(appendedExercise)
+
 
             // const workout = document.getElementById("workout_id")
             // // debugger
@@ -56,6 +55,41 @@ class ExerciseServices {
      
     }
 
+
 }
 
-   
+    // form.addEventListener( 'submit', function( ev ) {
+    //     var text = field.value;
+    //     if ( text !== '' ) {
+    //       todo.innerHTML += '<li>' + text + ' <button onclick="Delete(this);">Delete</button> </li>';
+    //       field.value = '';
+    //       //field.focus();
+    //     }
+    //     ev.preventDefault();
+    //   }, false);
+    
+
+    // getExercises(){
+    //         fetch(this.baseURL)
+    //         .then(resp => resp.json())
+    //         .then(json => {
+    //             json.forEach(exercise => {
+    //              const exercises = new Exercise(exercise);
+    //               exercises.renderExerciseReps()
+    //             })
+    //         })
+    //     }
+
+
+
+
+//     getWorkouts(){
+//             fetch(this.baseURL)
+//             .then(resp => resp.json())
+//             .then(json => {
+//                 json.forEach(workout => {
+//                  const workouts = new Workout(workout);
+//                   workouts.renderWorkout()
+//                 })
+//             })
+//         }
