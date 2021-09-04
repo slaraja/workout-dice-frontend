@@ -10,43 +10,31 @@ class Exercise {
 
 
     renderExercise = () => {
+            //gets the element by the ID from index.HTML
             const exerciseList = document.getElementById('exercise-list')
+            //adds exercise to the list
             exerciseList.classList.add('exercise')
 
             const exerciseName = document.createElement('h2');
+            //creates an H2 element for name
             exerciseName.innerText = this.name;
+            //adds the name to innertext
             
             const exerciseReps = document.createElement('h2');
             exerciseReps.innerText = this.reps;
         
             exerciseList.appendChild(exerciseName)
+            //appends the name and reps to the exercise list
             exerciseList.appendChild(exerciseReps)
 
             return exerciseList
+            //returns the exercise list
             
       
       };
 
     }
 
-    //     renderExercise() {
-    //         const exerciseList = document.getElementById('exercise-list')
-    //         exerciseList.classList.add('exercise')
-
-    //         const exerciseName = document.createElement('h2');
-    //         exerciseName.innerText = this.name;
-            
-    //         const exerciseReps = document.createElement('h2');
-    //         exerciseReps.innerText = this.reps;
-        
-    //         exerciseList.appendChild(exerciseName)
-    //         exerciseList.appendChild(exerciseReps)
-
-    //         const workoutUL = this.renderWorkouts() //returns the ul
-    //         exerciseReps.appendChild(workoutUL)
-
-    // };
-    //   };
 
 
     // `
