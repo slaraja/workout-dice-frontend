@@ -12,12 +12,3 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', exerciseEndPoint.handleSubmit);
 
 })
-
-
-
-
-
-
-//    fetch("http://localhost:3000/exercises", configObj)
-//     .then(r => r.json())
-//     .then(json => renderItem(json.data))
