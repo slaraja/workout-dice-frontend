@@ -29,10 +29,6 @@ class ExerciseServices {
         .then(resp => resp.json())
         //parses JSON into a JS object. It returns a promise.
         .then(json => {
-
-            // json.forEach(exercise => {
-            //     const exercises = new Exercise(exercise);
-            // exercises.renderExercise()
             
             const newExercise = new Exercise(json)
             const workoutList = document.getElementById(`workout-${newExercise.workout_id}`)
