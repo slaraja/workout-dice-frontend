@@ -17,7 +17,7 @@ class Workout {
 
         workoutList.appendChild(workoutName)
 
-        const exerciseUL = this.renderExercises() //returns the ul
+        const exerciseUL = this.renderExercises()
         workoutName.appendChild(exerciseUL)
     };
 

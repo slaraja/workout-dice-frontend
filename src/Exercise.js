@@ -41,7 +41,9 @@ class Exercise {
             }
         
             fetch(`http://localhost:3000/exercises/${this.id}`, configObj)
+            .then(r => r.json())
             .then(json => alert(json.message)) 
+          
 
             exerciseInfo.remove()
 
