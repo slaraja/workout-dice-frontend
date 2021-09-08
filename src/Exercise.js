@@ -27,9 +27,7 @@ class Exercise {
             exerciseInfo.appendChild(deleteButton)
 
             deleteButton.addEventListener('click', function (event) {
-                //two arguments - the event, which is the click, and the callback method
                 event.preventDefault()
-                //prevent the browser from making a POST request and refreshing
                 console.log(event.target.id, "event target")
 
             const configObj = {
@@ -44,7 +42,6 @@ class Exercise {
             .then(r => r.json())
             .then(json => alert(json.message)) 
           
-
             exerciseInfo.remove()
 
         })
@@ -52,6 +49,8 @@ class Exercise {
             return exerciseInfo
       
       };
+
+
 
     }
 

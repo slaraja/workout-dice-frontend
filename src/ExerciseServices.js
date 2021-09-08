@@ -25,7 +25,6 @@ class ExerciseServices {
         console.log("configObj", configObj)
         fetch('http://localhost:3000/exercises', configObj)
         .then(resp => resp.json())
-        //parses JSON into a JS object. It returns a promise.
         .then(json => {
             const newExercise = new Exercise(json)
             const workoutList = document.getElementById(`workout-${newExercise.workout_id}`)
