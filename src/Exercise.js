@@ -1,11 +1,17 @@
 class Exercise {
 
+    static all = []
+
     constructor({id, name, reps, workout_id}) {
         this.id = id;
         this.name = name; 
         this.reps = reps; 
         this.workout_id = workout_id;
+
+    Exercise.all.push(this)
+
     }
+
 
     renderExercise = () => {
             const exerciseInfo = document.createElement('div')
